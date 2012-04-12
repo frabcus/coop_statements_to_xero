@@ -12,7 +12,6 @@ for row in reader:
     if not headers and re.match(" Date", row[0]):
         headers = row
         headers.append('Credit-Debit')
-        print headers
 
     elif re.match("\d\d/\d\d/\d\d\d\d", row[0]):
         if not headers:
