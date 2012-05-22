@@ -13,7 +13,7 @@ Instructions
 
 3. cat the file into the Python script, and store the output CSV file.
 
-    $ cat Report-20120410133658.csv | ./script.py > ~/Downloads/xero.csv
+    $ cat Report-20120410133658.csv | ./script.py > ~/Desktop/xero.csv
 
 4. Go to the bank account, choose Manage Account, and Import a Statement.
 
