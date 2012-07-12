@@ -20,7 +20,7 @@ Instructions
 5. Select the CSV file. And Import.
 
 6. The first time you will need to match against Xero's terminology. Use the
-*last* column which contains Debit-Credit for the account value.
+*last* column which contains (Debit - Credit) for the account value.
 
 
 Technical notes
