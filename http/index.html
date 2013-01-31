@@ -1,9 +1,20 @@
 <html>
-<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-</head>
+  <head>
+      <meta charset="utf-8">
+      <title>Upload a spreadsheet</title>
+      <meta name="author" content="ScraperWiki Ltd">
+      <link rel="stylesheet" href="http://x.scraperwiki.com/vendor/style/bootstrap.min.css">
+      <link rel="stylesheet" href="http://x.scraperwiki.com/vendor/style/metro.bootstrap.css">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+      <script src="http://x.scraperwiki.com/vendor/js/bootstrap.min.js"></script>
+      <script src="http://coffeescript.org/extras/coffee-script.js"></script>
+      <script src="http://x.scraperwiki.com/js/custard.js"></script>
+      <meta http-equiv="cleartype" content="on">
+  </head>
 <body>
+
+<h1>Convert Co-op Business account satement CSV to Xero</h1>
 
 <p>Input statement downloaded from Co-op Business website:</p>
 <textarea rows="4" cols="50" id="input">
@@ -38,5 +49,28 @@ paste the CSV here
 	}
     )
 </script>
+
+<!--    <form id="up" action="../../file/" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" size="80" id="file">
+      <input type="hidden" name="apikey" id="apikey">
+      <input type="hidden" name="next" id="next">
+      <input type="submit" value="Convert now!">
+    </form>
+    <script type="text/coffeescript">
+      $ ->
+        settings = readSettings()
+        $('#next').val "#{window.location.pathname}done.html#{window.location.hash}"
+        $('#apikey').val settings.source.apikey
+        $('input:submit').hide()
+        $('#file').hide().on 'change', ->
+          path = $(@)[0].files[0].name
+          if path isnt ''
+            $('#fake').addClass('loading disabled').html "Uploading #{path}&hellip;"
+            $('input:submit').trigger 'click'
+        $('<a id="fake">').html('Select a file&hellip;').on('click', ->
+          $('#file').trigger 'click'
+        ).addClass('btn btn-primary').appendTo '#up'
+    </script>-->
+
 
 </body>
