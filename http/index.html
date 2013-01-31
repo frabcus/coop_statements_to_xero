@@ -1,0 +1,42 @@
+<html>
+<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<p>Input statement downloaded from Co-op Business website:</p>
+<textarea rows="4" cols="50" id="input">
+paste the CSV here 
+</textarea>
+
+<p>
+<button type="button" id="go">Convert it!</button>
+</p>
+
+<p>Ouput, with extra column of credit-debit for Xero:</p>
+<textarea rows="4" cols="50" id="output">
+</textarea>
+
+
+<script>
+    $('#go').click(function() {
+	var input_csv = $('#input').val();
+	   //alert(input_csv);
+	    $.ajax({
+		type: "post",
+		url: "../../exec",
+		dataType: 'text',
+		cache: false,
+		data: { cmd: 'echo | ~/coop_statements_to_xero/script.py << END\n'
+	+ input_csv + '\n'
+	+ 'END\n', apikey: '63c5d0fa-a02a-4113-b55f-6a047aa55bdb' },
+		success: function(text){
+		$('#output').val(text);
+		}
+	    })
+	}
+    )
+</script>
+
+</body>

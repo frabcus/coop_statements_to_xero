@@ -9,6 +9,9 @@ writer = csv.writer(sys.stdout)
 
 headers = None
 for row in reader:
+    if len(row) == 0:
+	continue
+
     if not headers and re.match(" Date", row[0]):
         headers = row
         headers.append('Credit-Debit')
