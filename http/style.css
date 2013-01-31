@@ -1,0 +1,20 @@
+body {
+  background: transparent;
+  padding: 20px;
+}
+
+p.loading {
+    margin-top: 100px;
+    padding-top: 50px;
+    text-align: center;
+    background: transparent url('tool-loader.gif') center top no-repeat;
+    color: #666;
+    font-size: 20px;
+}
+
+.btn-primary.disabled.loading {
+  background-image: url(button-primary-loader.gif);
+  background-position: 10px 50%;
+  background-repeat: no-repeat;
+  padding-left: 34px;
+}
