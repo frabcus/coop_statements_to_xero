@@ -1,0 +1,5 @@
+{
+  "displayName": "Coop to Xero spreadsheet view",
+  "gitUrl": "https://github.com/frabcus/coop_statements_to_xero",
+  "description": "Convert a co-op bank statement to Xero"
+}
